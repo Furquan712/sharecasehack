@@ -84,6 +84,7 @@ const SS001 = () => {
             method="post"
             id="basket-form"
             action="https://kite.zerodha.com/connect/basket"
+            onSubmit={submit}
           >
             <input type="hidden" name="api_key" value="c6t304545t0ssrv3" />
             <input type="hidden" id="basket" name="data" value="" />
@@ -97,7 +98,7 @@ const SS001 = () => {
                 width: "100%",
               }}
               type="submit"
-              onSubmit={submit}
+              
             >
               Invest Now
             </button>
