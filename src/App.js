@@ -4,10 +4,11 @@ import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
 import { Navbar, Footer, Sidebar, ThemeSettings } from './components';
-import { Ecommerce, Orders, Calendar, Employees, Stacked, Pyramid, Customers, Kanban, Line, Area, Bar, Pie, Financial, ColorPicker, ColorMapping, Editor, Ownbucket } from './pages';
+import { Ecommerce, Orders, Calendar, Employees, Stacked, Pyramid, Customers, Kanban, Line, Area, Bar, Pie, Financial, ColorPicker, ColorMapping, Editor } from './pages';
 import './App.css';
 
 import { useStateContext } from './contexts/ContextProvider';
+import CreateBucket from './pages/CreateBucket';
 
 const App = () => {
   const { setCurrentColor, setCurrentMode, currentMode, activeMenu, currentColor, themeSettings, setThemeSettings } = useStateContext();
@@ -65,13 +66,13 @@ const App = () => {
 
               <Routes>
                 {/* dashboard  */}
-                <Route path="/" element={(<Ecommerce />)} />
+                <Route path="/" element={(<Employees />)} />
                 <Route path="/nifty50" element={<Employees />} />
 
                 {/* pages  */}
                 <Route path="/trending" element={<Orders />} />
+                <Route path="/createbucket" element={<CreateBucket />} />
                 <Route path="/search" element={<Customers />} />
-                <Route path="/createnow" element={<Ownbucket />} />
                 <Route path="/bucket" element={(<Ecommerce />)} />
 
                 

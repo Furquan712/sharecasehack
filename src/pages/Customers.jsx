@@ -12,6 +12,7 @@ const Customers = () => {
   return (
     <div className="m-2 md:m-10 mt-24 p-2 md:p-10 bg-white rounded-3xl">
       <Header category="Page" title="Search your Investments" />
+      <input type="text" placeholder="Search" className="w-full" style={{padding:'10px',margin:'15px'}}/>
       <GridComponent
         dataSource={customersData}
         enableHover={false}
