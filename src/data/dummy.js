@@ -495,6 +495,10 @@ export const links = [
         name: 'search',
         icon: <RiContactsLine />,
       },
+      {
+        name: 'createnow',
+        icon: <RiContactsLine />,
+      },
     ],
   },
    
