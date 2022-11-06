@@ -506,31 +506,31 @@ export const links = [
   {
     title: 'Charts',
     links: [
-      {
-        name:'Stocks',
-        icon: <RiStockLine />,
-      },
+      // {
+      //   name:'Stocks',
+      //   icon: <RiStockLine />,
+      // },
       {
         name: 'line',
         icon: <AiOutlineStock />,
       },
-      {
-        name: 'area',
-        icon: <AiOutlineAreaChart />,
-      },
+      // {
+      //   name: 'area',
+      //   icon: <AiOutlineAreaChart />,
+      // },
 
-      {
-        name: 'bar',
-        icon: <AiOutlineBarChart />,
-      },
-      {
-        name: 'pie',
-        icon: <FiPieChart />,
-      },
-      {
-        name: 'financial',
-        icon: <RiStockLine />,
-      },
+      // {
+      //   name: 'bar',
+      //   icon: <AiOutlineBarChart />,
+      // },
+      // {
+      //   name: 'pie',
+      //   icon: <FiPieChart />,
+      // },
+      // {
+      //   name: 'financial',
+      //   icon: <RiStockLine />,
+      // },
       
       
     ],
@@ -2443,7 +2443,7 @@ export const lineCustomSeries = [
   { dataSource: lineChartData[0],
     xName: 'x',
     yName: 'y',
-    name: 'Germany',
+    name: 'Small',
     width: '2',
     marker: { visible: true, width: 10, height: 10 },
     type: 'Line' },
@@ -2451,7 +2451,7 @@ export const lineCustomSeries = [
   { dataSource: lineChartData[1],
     xName: 'x',
     yName: 'y',
-    name: 'England',
+    name: 'Medium',
     width: '2',
     marker: { visible: true, width: 10, height: 10 },
     type: 'Line' },
@@ -2459,7 +2459,7 @@ export const lineCustomSeries = [
   { dataSource: lineChartData[2],
     xName: 'x',
     yName: 'y',
-    name: 'India',
+    name: 'High',
     width: '2',
     marker: { visible: true, width: 10, height: 10 },
     type: 'Line' },
