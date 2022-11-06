@@ -71,7 +71,7 @@ const App = () => {
 
                 {/* pages  */}
                 <Route path="/trending" element={<Orders />} />
-                <Route path="/createbucket" element={<CreateBucket />} />
+                <Route path="/Create%20Your%20Own" element={<CreateBucket />} />
                 <Route path="/search" element={<Customers />} />
                 <Route path="/bucket" element={(<Ecommerce />)} />
 
