@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
@@ -9,8 +9,10 @@ import './App.css';
 
 import { useStateContext } from './contexts/ContextProvider';
 import CreateBucket from './pages/CreateBucket';
-
+import userContext from './contexts/userContext';
+import SS001 from './pages/SS001';
 const App = () => {
+  const {user} = useContext(userContext);
   const { setCurrentColor, setCurrentMode, currentMode, activeMenu, currentColor, themeSettings, setThemeSettings } = useStateContext();
 
   useEffect(() => {
@@ -42,7 +44,7 @@ const App = () => {
 
             </TooltipComponent>
           </div>
-          {activeMenu ? (
+          {activeMenu && user != null ? (
             <div className="w-72 fixed sidebar dark:bg-secondary-dark-bg bg-white ">
               <Sidebar />
             </div>
@@ -74,6 +76,7 @@ const App = () => {
                 <Route path="/Create%20Your%20Own" element={<CreateBucket />} />
                 <Route path="/search" element={<Customers />} />
                 <Route path="/bucket" element={(<Ecommerce />)} />
+                <Route path="/SS001"  element={<SS001 />} />
 
                 
 
