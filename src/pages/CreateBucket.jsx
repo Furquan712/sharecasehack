@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { Header } from '../components';
+
 
 const CreateBucket = () => {
   const [bucket, setBucket] = useState([]);
@@ -42,28 +44,44 @@ const CreateBucket = () => {
 
   return (
     <div className='<div className="m-2 md:m-10 mt-24 p-2 md:p-10 bg-white rounded-3xl">'>
-      <h1>CreateBucket</h1>
+      <div style={{textAlign:"center"}}>
+      <Header style={{color:"#2636c3"}}title={"Create Your Own Bucket"} />
+      </div>
+      <div style={{display:"flex",justifyContent:"space-evenly"}}>
+      <div>
+      <img src="https://as2.ftcdn.net/v2/jpg/03/15/29/97/1000_F_315299711_dDSbKjmr4pltUo6pQY6YF6xt6tHZwzZQ.jpg" alt="Girl in a jacket" width="500" height="600"/>
+      </div>
+      <div>
       <form>
-        <label for="fname">Name</label>
+        <div style={{display:"flex",justifyContent:"space-evenly", margin:"10px"}}>
+        <label style={{fontSize:"30px", fontWeight:"bold", fontFamily:"serif"}} for="fname">Name</label>
+        <input style={{border:"2px solid black", borderRadius:"10px"}} type="text" />
+        </div>
         <br />
-        <input type="text" />
-
-        <label for="fname">Description</label>
-        <br />
-        <textarea type="text"></textarea>
-
-        <div>
-          <h2>Select Your Stocks</h2>
-          <input onChange={elasticSearch} placeholder="Stock Code"></input>
-
-          <select name="cars" id="cars" onChange={select}>
-            <option value="Select" defaultValue={""}>
-              Select Stock
-            </option>
-            {bucket.map((item,index) => {
-              return <option key={index} value={item}>{item}</option>;
-            })}
-          </select>
+        <div style={{display:"flex",justifyContent:"space-evenly", margin:"10px"}}>
+        <label style={{fontSize:"30px", fontWeight:"bold", fontFamily:"serif"}}  for="fname">Description</label>
+        <textarea style={{border:"2px solid black", borderRadius:"10px"}} type="text"></textarea>
+        </div>
+       
+        <div style={{margin:"40px"}}>
+          <h2  style={{textAlign:"center", fontSize:"30px", fontWeight:"bold", fontFamily:"serif",}}>Select Your Stocks</h2>
+          <div  style={{display:"flex", justifyContent:"space-evenly", margin:"10px"}}>
+            <div>
+          <input style={{border:"2px solid black", borderRadius:"10px"}} onChange={elasticSearch} placeholder="Stock Code"></input>
+             
+            </div>
+            <div>
+            <select name="cars" id="cars" onChange={select}>
+  <option value="Select" defaultValue={""} style={{fontSize:"30px", fontWeight:"bold", fontFamily:"serif"}}>
+    Select Stock
+  </option>
+  {bucket.map((item,index) => {
+    return <option key={index} value={item}>{item}</option>;
+  })}
+             </select>
+            </div>      
+          </div>
+         
         </div>
         <div>
           <table>
@@ -75,20 +93,26 @@ const CreateBucket = () => {
             {selectedStock.map((item,index) => {
               return (
                 <tr>
-                  <td>{item.name}</td>
-                  <td>{item.price}</td>
-                  <td><input type="number" onChange={quantityChange} id={index}  defaultValue={1}></input></td>
+                  <td style={{margin:"7px"}}>{item.name}</td>
+                  <td style={{margin:"7px"}}>{item.price}</td>
+                  <td style={{margin:"7px"}}><input type="number" onChange={quantityChange} id={index}  defaultValue={1}></input></td>
                 </tr>
               );
             })}
           </table>
         </div>
-        <div>
-            <h1>Total Price: </h1>
+        <div style={{display:"flex", justifyContent:"space-evenly", marginTop:"30px"}}>
+            <h1 style={{fontSize:"30px", fontWeight:"bold", fontFamily:"serif"}}>Total Price: </h1>
             <h1>{total()}</h1>
         </div>
-        <button type="submit">Create</button>
+        <div style={{display:"flex", justifyContent:"center", marginTop:"25px", borderRadius:"10px"}}>
+        <button style={{backgroundColor:"skyblue", padding:"10px", fontWeight:"bold"}}  type="submit">Create your Case</button>
+        </div>
       </form>
+      </div>
+      </div>
+     
+     
     </div>
   );
 };
