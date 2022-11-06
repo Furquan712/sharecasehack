@@ -93,9 +93,9 @@ const CreateBucket = () => {
             {selectedStock.map((item,index) => {
               return (
                 <tr>
-                  <td style={{margin:"7px"}}>{item.name}</td>
-                  <td style={{margin:"7px"}}>{item.price}</td>
-                  <td style={{margin:"7px"}}><input type="number" onChange={quantityChange} id={index}  defaultValue={1}></input></td>
+                  <td style={{marginRight:"7px"}}>{item.name}</td>
+                  <td style={{marginRight:"7px"}}>{item.price}</td>
+                  <td style={{marginRight:"7px"}}><input type="number" onChange={quantityChange} id={index}  defaultValue={1}></input></td>
                 </tr>
               );
             })}
