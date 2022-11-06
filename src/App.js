@@ -8,6 +8,7 @@ import { Ecommerce, Orders, Calendar, Employees, Stacked, Pyramid, Customers, Ka
 import './App.css';
 
 import { useStateContext } from './contexts/ContextProvider';
+import CreateBucket from './pages/CreateBucket';
 
 const App = () => {
   const { setCurrentColor, setCurrentMode, currentMode, activeMenu, currentColor, themeSettings, setThemeSettings } = useStateContext();
@@ -70,6 +71,7 @@ const App = () => {
 
                 {/* pages  */}
                 <Route path="/trending" element={<Orders />} />
+                <Route path="/createbucket" element={<CreateBucket />} />
                 <Route path="/search" element={<Customers />} />
                 <Route path="/bucket" element={(<Ecommerce />)} />
 
